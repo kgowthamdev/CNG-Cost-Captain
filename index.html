@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNG Cost Captain</title>
-    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h3 id="ti">CNG Cost Captain</h3>
-    <div class="mainbox">
-        <label class="D">Distance:</label>
-        <input type="number" id="dist" min="0" placeholder="How Many km">
-        <br><br>
-        <label class="F">Fuel Efficiency:</label>
-        <input type="number" id="fe" min="0" placeholder="km/l">
-        <br><br>
-        <label class="C">Price per unit of CNG:</label>
-        <input type="number" id="price" min="0" placeholder="₹/Liter">
+<body class="bg-[#090030] flex flex-col justify-center items-center h-screen ">
+    <h3 id="ti" class="text-white text-2xl mb-7 md:mb-16 ">CNG Cost Captain</h3>
+    <div class=" flex space-x-10 bg-[#F30A49]  p-8 md:p-12 rounded-md md:mx-0 mx-8">
+        <div class="text-xl md:text-2xl space-y-5 ">
+            <h3>Distance</h3>
+            <h3>Fuel Efficiency</h3>
+            <h3>Price per unit of CNG</h3>
+        
+
+        </div>
+        <div class="flex flex-col text-sm space-y-5   ">
+            <input class="  focus:outline-none focus:ring rounded-md p-2 w-28 md:w-fit" type="number" id="dist" min="0" placeholder="How Many km">
+            <input class=" rounded-md p-2 focus:outline-none focus:ring w-28 md:w-fit" type="number" id="fe" min="0" placeholder="km/l">
+            <input class=" rounded-md p-2 focus:outline-none focus:ring w-28 md:w-fit" type="number" id="price" min="0" placeholder="₹/Liter">
+        </div>
+        
+        
     </div>
-    <div id="butn">
-    <button class="calc" onclick="calculate()">Calculate</button>
-    <button class="res" onclick="reset()">Reset</button>
+    <div id="butn" class="mt-8 space-x-8">
+    <button class="bg-[#59D5E0] p-2 rounded-xl px-3 font-semibold hover:text-white hover:scale-105" onclick="calculate()">Calculate</button>
+    <button class=" bg-[#F5DD61] p-4 rounded-xl py-2 font-semibold hover:text-white hover:scale-105" onclick="reset()">Reset</button>
 </div>
-    <div id="result"></div>
+    <div class="text-white mt-8 text-xl h-2" id="result"></div>
     <script src="index.js"></script>
     
 </body>
